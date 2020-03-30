@@ -1,0 +1,8 @@
+    "The files in the Clipboard are not movable." => "File-file yang di clipboard tidak memungkinkan untuk di pindah.",
+    "{count} files in the Clipboard are not movable. Do you want to move the rest?" => "{count} file-file yang di Clipboard tidak bisa di pindah. Apakan anda mau memindahkan sisa-nya?",
+    "The files in the Clipboard are not removable." => "File file yang di Clipboard tidak memungkinkan untuk di hapus.",
+    "{count} files in the Clipboard are not removable. Do you want to delete the rest?" => "{count} file-file di Clipboard tidak memungkinkan untuk di hapus. Apakah anda mau menghapus sisa-nya?",
+    "The selected files are not removable." => "File-file yang anda pilih tidak memungkinkan untuk di hapus.",
+    "{count} selected files are not removable. Do you want to delete the rest?" => "{count} file-file yang terpilih tidak memungkinkan untuk di hapus. Apakah anda mau menghapus sisa-nya?",
+    "Are you sure you want to delete all selected files?" => "Yakin anda akan menghapus semua file-file yang di pilih?",
+    "Failed to delete {count} files/fo

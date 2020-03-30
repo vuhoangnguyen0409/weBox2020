@@ -1,0 +1,595 @@
+/** RESET CSS **/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/** DÙNG CHUNG **/
+body, td, th {
+    font: 12px/21px Verdana, Arial, Helvetica, Sans-serif;
+    color: #444;
+}
+body {
+    background: #32323A url('../images/bg.jpg');
+}
+p {
+    margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+}
+form {
+    margin: 0px auto;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px 20px;
+    margin: 0px auto;
+    /** CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+legend {
+    padding: 0px 10px;
+    color: #888;
+    text-transform: uppercase;
+    font: bold 13px Arial, Helvetica, Sans-serif;
+    margin-left: -10px;
+}
+label {
+    padding: 3px 10px 0px 0px;
+}
+div.input-group {
+    margin-bottom: 15px;
+}
+div.input-group:after {
+    content: "";
+    display: block;
+    width:  0px;
+    height: 0px;
+    clear: both;
+}
+div.input-group:last-child {
+    margin-bottom: 0px;
+}
+div.input-group-msg {
+    font-size: 16px;
+}
+div.input-item {
+    padding-right: 8px;
+}
+div.input-item.fixright {
+    padding-right: 0px;
+}
+div.input-item label {
+    width: auto;
+    padding-right: 30px;
+}
+input:focus, textarea:focus {
+    outline: none;
+}
+input[type=text], input[type=password], textarea, select {
+    display: block;
+    width: 100%;
+    border: 1px solid #cacaca;
+    padding: 5px 3px 5px 3px;
+    resize: none;
+    margin: 0px;
+    color: #666;
+    /** CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+input[type=radio], input[type=checkbox] {
+    vertical-align: middle;
+    outline: none;
+    margin-right: 5px;
+}
+
+input[type=submit], input[type=reset], input[type=button] {
+    height: 30px;
+    line-height: 30px;
+    border: none;
+    background: url('../images/blue-title.jpg') repeat-x left center;
+    padding: 0px 25px;
+    color: white;
+    cursor: pointer;
+    /** CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
+    background: url('../images/bg-button-hover.png') repeat-x left center;
+}
+.error_msg {
+    text-align: left;
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 5px 10px 54px;
+    border: 1px dotted pink;
+    background: #FEF5F5 url("../images/error.png") no-repeat 15px center;
+    /** CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.alert_msg {
+    text-align: left;
+    font-style: italic;
+    color: black;
+    padding: 10px 5px 10px 54px;
+    border: 1px dotted green;
+    background: #C1FFE0 url("../images/valid.png") no-repeat 15px center;
+    /** CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.clear-fix:after {
+    display: block;
+    content: "";
+    width: 0px;
+    height: 0px;
+    clear: both;
+}
+.readmore {
+    border: none;
+    background: url('../images/blue-title.jpg') repeat-x left center;
+    padding: 3px 15px;
+    color: white;
+    /** CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.readmore:hover {
+    background: url('../images/bg-button-hover.png') repeat-x left center;
+}
+
+/** CÁC THÀNH PHẦN RIÊNG **/
+
+/* For #layout */
+#layout {
+    width: 800px;
+    margin: 30px auto;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.60);
+    -moz-box-shadow: 0px 0px 8px rgba(0,0,0,0.60);
+    -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.60);
+}
+
+/* For #top */
+#top {
+    height: 200px;
+    line-height: 100px;
+    background: #3593C9 url('../images/slideshow.jpg');
+    color: white;
+    text-align: center;
+    font-weight:  bold;
+    
+    border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+}
+
+/* For #topmenu */
+#topmenu {
+    height: 30px;
+    background: #E76637;
+    margin-left: 200px;
+}
+#topmenu ul {
+    margin: 0px;
+    padding-bottom: 20px;
+    list-style-type: none;
+}
+#topmenu li {
+    border-bottom: 1px dotted #6C9FE6;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+}
+#topmenu li a {
+    border-left: 5px solid #23457A;
+    padding: 0px 10px;
+    color: white;
+    font-weight: bold;
+    display: block;
+}
+#topmenu li a:hover {
+    border-left: 5px solid #D98A3A;
+    color: #082656;
+}
+#topmenu li ul {
+    display: none;
+    width: 200px;
+    padding: 0px;
+}
+#topmenu li:hover > ul {
+    display: block;
+    background: #3A72C0;
+    position: absolute;
+    left: 200px;
+    top: 0px;
+}
+#topmenu > ul > li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+    border: none;
+}
+#topmenu > ul > li > a {
+    display: block;
+    text-align: center;
+    padding: 0px;
+    border: none;
+}
+#topmenu > ul > li > a:hover {
+    border: none;
+    background: #4B7EC5;
+    color: white;
+}
+#topmenu > ul > li:hover > ul {
+    left: 0px;
+    top: 30px;
+}
+
+/* For #content */
+#content {
+    background: white;
+}
+
+/* For #left */
+#left {
+    width: 200px;
+    float: left;
+    position: relative;
+    top: -55px;
+}
+
+/* For #leftmenu */
+#leftmenu {
+    background: #3A72C0 url("../images/bgd-module-spotline.png") repeat -50px top;
+    margin-bottom: 10px;
+    
+    border-radius: 0px 5px 5px 0px;
+    -moz-border-radius: 0px 5px 5px 0px;
+    -webkit-border-radius: 0px 5px 5px 0px;
+}
+#leftmenu h1 {
+    font-family: Arial;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 10px;
+    color: #0D3E82;
+    background: #3A72C0 url("../images/bgd-module-spotline.png") repeat -46px top;
+    border-bottom: 1px dotted #6C9FE6;
+    font-size: 15px;
+    
+    border-radius: 0px 5px 0px 0px;
+    -moz-border-radius: 0px 5px 0px 0px;
+    -webkit-border-radius: 0px 5px 0px 0px;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75);
+    -moz-text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75);
+    -webkit-text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75);
+}
+#leftmenu ul {
+    margin: 0px;
+    padding-bottom: 20px;
+    list-style-type: none;
+}
+#leftmenu li {
+    border-bottom: 1px dotted #6C9FE6;
+    position: relative;
+}
+#leftmenu li a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    border-left: 5px solid #23457A;
+    padding: 0px 10px;
+    color: white;
+    font-weight: bold;
+}
+#leftmenu li a:hover {
+    border-left: 5px solid #D98A3A;
+    color: #082656;
+}
+#leftmenu li ul {
+    display: none;
+    width: 180px;
+    padding: 0px;
+}
+#leftmenu li:hover > ul {
+    display: block;
+    background: #3A72C0;
+    position: absolute;
+    left: 201px;
+    top: 0px;
+}
+#leftmenu > ul {
+    background: url("../images/mod_title_shadow.png") no-repeat center top;
+}
+#leftmenu > ul > li > a {
+    height: 35px;
+    line-height: 35px;
+    border: none;
+    padding: 0px 10px 0px 38px;
+    background: url('../images/arrow-white.png') no-repeat 10px center;
+}
+#leftmenu > ul > li > a:hover {
+    border: none;
+}
+
+/* For #login */
+#login h1 {
+    font-family: Arial;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 10px;
+    color: #0D3E82;
+    background: #3A72C0 url("../images/bgd-module-spotline.png") repeat -46px top;
+    border-bottom: 1px dotted #ccc;
+    font-size: 15px;
+    
+    border-radius: 0px 5px 0px 0px;
+    -moz-border-radius: 0px 5px 0px 0px;
+    -webkit-border-radius: 0px 5px 0px 0px;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75);
+    -moz-text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75);
+    -webkit-text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75);
+}
+#login .content {
+    padding: 15px;
+    background: white url("../images/mod_title_shadow.png") no-repeat center -1px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    
+    border-radius: 0px 0px 5px 0px;
+    -moz-border-radius: 0px 0px 5px 0px;
+    -webkit-border-radius: 0px 0px 5px 0px;
+}
+#login .content div.loading {
+    text-align: center;
+}
+#login .content .error_msg {
+    color: #E76637;
+    font-size: 11px;
+    border: none;
+    background: none;
+    padding: 0px;
+}
+#login div.input-group {
+    margin-bottom: 10px;
+}
+#login div.input-item {
+    margin-left: 29px;
+    padding-right: 12px;
+}
+#login input[type=submit], input[type=reset], input[type=button] {
+    padding: 0px;
+    width: 100%;
+    height: 30px;
+}
+#login label {
+    float: left;
+    width: 28px;
+    height: 28px;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-right: none;
+    /** CSS 3.0 **/
+    border-radius: 3px 0px 0px 3px;
+    -moz-border-radius: 3px 0px 0px 3px;
+    -webkit-border-radius: 3px 0px 0px 3px;
+}
+#login label.username {
+    background: url('../images/username-label-icon.png') no-repeat center center;
+}
+#login label.password {
+    background: url('../images/password-label-icon.png') no-repeat center center;
+}
+#login input[type=text], input[type=password] {
+    width: 100%;
+    height: 28px;
+    border: 1px solid #ccc;
+    padding: 0px 5px;
+    /** CSS 3.0 **/
+    border-radius: 0px 3px 3px 0px;
+    -moz-border-radius: 0px 3px 3px 0px;
+    -webkit-border-radius: 0px 3px 3px 0px;
+}
+#login .login-info {
+    margin-bottom: 10px;
+}
+#login .login-info ul {
+    list-style: circle inside;
+}
+#login .login-info a {
+    color: #555;
+}
+#login .login-info a:hover {
+    font-weight: bold;
+}
+
+/* For #main */
+#main {
+    width: 560px;
+    float: left;
+    padding: 20px;
+}
+
+/** Trang index.php và category.php **/
+#main div.news_intro {
+    text-align: justify;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #ccc;
+}
+#main div.news_intro h1 {
+    font: 15px Arial, Helvetica, Sans-serif;
+    color: #204CAA;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#main div.news_intro img.thumbs {
+    width: 120px;
+    float: left;
+    border: 1px solid #ccc;
+    padding: 3px;
+    margin-right: 10px;
+}
+#main div.news_intro a.readmore {
+    float: right;
+}
+#main div.news_intro div.news_info {
+    margin-bottom: 5px;
+    font-size: 11px;
+}
+#main div.news_intro div.news_info, #main div.news_intro div.news_info a {
+    color: gray;
+}
+#main div.news_intro span.date_info {
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    background: url('../images/calendar-black-icon.png') no-repeat left center;
+    padding: 0px 20px;
+}
+#main div.news_intro span.cate_info {
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    background: url('../images/cate-black-icon.png') no-repeat left center;
+    padding: 0px 20px;
+}
+#main div.news_intro span.user_info {
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    background: url('../images/user-black-icon.png') no-repeat left center;
+    padding: 0px 20px;
+}
+#main div.news_intro span.source_info {
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    background: url('../images/source-black-icon.png') no-repeat left center;
+    padding: 0px 20px;
+}
+
+/** Trang detail.php **/
+#main div.news {
+    text-align: justify;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #aaa;
+}
+#main div.news h1 {
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #204CAA;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#main div.news img {
+    max-width: 552px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    background: white;
+}
+#main div.news div.news_intro {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px dotted #ccc;
+    background: #f9f9f9;
+    font-size: 11px;
+    color: #E76637;
+    
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+/* For #comment */
+#comment h2 {
+    height: 32px;
+    background: url('../images/chat-icon.png') no-repeat left center;
+    font: bold 15px/32px Geneva, Arial, Helvetica, Sans-serif;
+    color: #0E5C94;
+    margin: 0px;
+    padding: 0px 0px 0px 36px;
+    text-transform: uppercase;
+}
+#comment_content {
+    margin-bottom: 10px;
+}
+#comment_content .comment_item {
+    border: 1px dotted #ccc;
+    background: #f5f5f5;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 11px;
+    
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+#comment_content .comment_item h3 {
+    color: #D1704C;
+    font-size: 12px;
+    margin: 0px 0px 6px 0px;
+}
+
+/* For #bottom*/
+#bottom {
+    height: 40px;
+    line-height: 40px;
+    background: #4C6E94;
+    color: #bbb;
+    text-align: center;
+    
+    border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+}
+/*************************************************
+    THANH PHÂN TRANG (THUẬT TOÁN PHÂN TRANG) 
+ ************************************************/
+.paging_nav {
+    text-align: center;
+    margin-top: 10px;
+}
+.paging_nav span.current_page, .paging_nav a {
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+}
+.paging_nav span.current_page {
+    margin: 0px 2px;
+    padding: 4px 7px;
+    background-color: #4C6E94;
+    color: #eee;
+    font-weight: bold;
+}
+.paging_nav a {
+    margin: 0px 2px;
+    padding: 3px 6px;
+    border: 1px solid gray;
+    color: #555555;
+    font-weight: bold;
+}
+.paging_nav a:hover {
+    padding: 4px 7px;
+    background-color: #4C6E94;
+    border: none;
+    color: #eee;
+}

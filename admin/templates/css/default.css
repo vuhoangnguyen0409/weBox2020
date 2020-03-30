@@ -1,0 +1,420 @@
+/** RESET CSS **/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/** DÙNG CHUNG **/
+body, td, th {
+    font: 12px/21px Arial, Helvetica, sans-serif;
+    color: #444;
+}
+body {
+    background: #32323A url('../images/login-bg.jpg');
+    width: 940px;
+    margin: 30px auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+img.thumbs {
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 2px;
+    background: white;
+}
+
+form {
+    margin: 0px auto;
+}
+
+fieldset {
+    border: 1px solid #efefef;
+    padding: 20px;
+    margin: 0px auto;
+    /** CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+legend {
+    padding: 0px 20px;
+    color: #0A71A5;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+label {
+    width: 110px;
+    float: left;
+    padding: 3px 10px 0px 0px;
+}
+
+div.input-group {
+    margin-bottom: 15px;
+}
+
+div.input-group:after {
+    content: "";
+    display: block;
+    width:  0px;
+    height: 0px;
+    clear: both;
+}
+
+div.input-group:last-child {
+    margin-bottom: 0px;
+}
+
+div.input-group-msg {
+    font-size: 16px;
+}
+
+div.input-item {
+    margin-left: 120px;
+    padding-right: 8px;
+}
+
+div.input-item.fixright {
+    padding-right: 0px;
+}
+
+div.input-item label {
+    width: auto;
+    padding-right: 30px;
+}
+
+input:focus, textarea {
+    outline: none;
+}
+
+input[type=text], input[type=password], textarea, select {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px 3px 5px 3px;
+    resize: none;
+    margin: 0px;
+    color: #666;
+    /** CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+input[type=radio], input[type=checkbox] {
+    vertical-align: middle;
+    outline: none;
+    margin-right: 5px;
+}
+
+input[type=submit], input[type=reset], input[type=button] {
+    height: 30px;
+    line-height: 30px;
+    border: none;
+    background: url('../images/blue-title.jpg') repeat-x left center;
+    padding: 0px 25px;
+    color: white;
+    cursor: pointer;
+    /** CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
+    background: url('../images/bg-button-hover.png') repeat-x left center;
+}
+
+.error_msg {
+    text-align: left;
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 5px 10px 54px;
+    border: 1px dotted pink;
+    background: #FEF5F5 url("../images/error.png") no-repeat 15px center;
+    /** CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.alert_msg {
+    text-align: left;
+    font-style: italic;
+    color: black;
+    padding: 10px 5px 10px 54px;
+    border: 1px dotted green;
+    background: #C1FFE0 url("../images/valid.png") no-repeat 15px center;
+    /** CSS 3.0 **/
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.clear-fix:after {
+    display: block;
+    content: "";
+    width: 0px;
+    height: 0px;
+    clear: both;
+}
+
+/** DÙNG RIÊNG **/
+/** LAYOUT
+ ******************************/
+#layout {
+    /** CSS 3.0 **/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.45);
+    -webkit-box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.45);
+}
+
+#top {
+    background: #4C6E94;
+    height: 60px;
+    line-height: 60px;
+    padding: 0px 20px;
+    font-size: 16px;
+    color: #eee;
+    font-weight: bold;
+    /** Thêm CSS 3.0 **/
+    border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+}
+
+#menu {
+    background-color: #E5E5E5;
+    padding: 3px;
+    font-weight: bold;
+    border: 1px solid silver;
+}
+
+#menu td {
+    font-weight: bold;
+}
+
+#menu a {
+    color: #555555;
+}
+
+#menu a:hover {
+    color: #BF0000;
+}
+
+#main {
+    padding: 25px;
+    background-color: white;
+    
+}
+
+#bottom{
+    line-height: 40px;
+    height: 40px;
+    color: #eee;
+    background: url('../images/blue-title.jpg') repeat-x left center;
+    text-align: center;
+    /** CSS 3.0 **/
+    border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+}
+
+/** MODULE
+ ******************************/
+div.module {
+    margin-bottom: 20px;
+}
+
+div.module:last-child {
+    margin-bottom: 0px;
+}
+
+div.module h3 {
+    font: bolder 16px Arial;
+    text-transform: uppercase;
+    color: #4C6E94;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+div.module .content {
+    /** CSS 3.0 **/
+    border-radius: 0px 0px 4px 4px;
+    -moz-border-radius: 0px 0px 4px 4px;
+    -webkit-border-radius: 0px 0px 4px 4px;
+}
+
+
+/********************************
+    DÙNG CHO TRANG CHÍNH 
+ *******************************/
+table.function-table {
+    border-spacing: 10px;
+    margin: 0px auto;
+    /*
+    background-color: #F5F5F5;
+    border: 1px solid #D6D6D6;
+    */
+    /* Thêm một chút CSS 3 */
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.function-item {
+    border: 1px solid #d8d8d8;
+    width: 120px;
+    height: 40px;
+    padding: 85px 5px 5px 5px;
+    text-align: center;
+    /* Thêm một chút CSS 3 */
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+.function-item:hover {
+    background-color: #f5f5f5;
+    /* Thêm một chút CSS 3 */
+    border-radius: 10px 4px 80px/20px 4px;
+    -moz-border-radius: 10px 4px 80px/20px 4px;
+    -webkit-border-radius: 10px 4px 80px/20px 4px;
+    box-shadow: 0px 0px 4px #cecece;
+    -moz-box-shadow: 0px 0px 4px #cecece;
+    -webkit-box-shadow: 0px 0px 4px #cecece;
+}
+.function-item a {
+    color: #555555;
+    font-weight: bold;
+}
+.function-item:hover a{
+    color: black;
+}
+.stats-panel {
+    width: 300px;
+    text-align: left;
+    vertical-align: top;
+    line-height: 22px;
+    padding: 0px 10px;
+}
+.stats-panel h3 {
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0px 0px 10px 0px;
+    padding: 0px 40px;
+    background: url('../images/chart.png') no-repeat left center;
+}
+.stats-panel ul {
+    padding: 0px 20px;
+}
+.user-add {
+    background: url("../images/user_add.png") no-repeat center center;
+}
+.user-list {
+    background: url("../images/user.png") no-repeat center center;
+}
+.cate-add {
+    background: url("../images/category_add.png") no-repeat center center;
+}
+.cate-list {
+    background: url("../images/category.png") no-repeat center center;
+}
+.news-add {
+    background: url("../images/news_add.png") no-repeat center center;
+}
+.news-list {
+    background: url("../images/news.png") no-repeat center center;
+}
+
+/**********************
+    BẢNG DANH SÁCH
+ *********************/
+.list-table /* Bảng danh sách */ {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+}
+
+tr.list-heading /* Dòng chứa tiêu đề bảng */ {
+    background: #4C6E94 url("../images/blue-title.jpg");
+    border-right: 1px solid #4C6E94;
+}
+
+tr.list-heading > th /* Những ô ở dòng tiêu đề */ {
+    font-weight: bold;
+    letter-spacing: 1px;
+    height: 26px;
+    color: #ddd;
+    background: url('../images/nav_sep.png') no-repeat left bottom;
+    padding: 3px;
+}
+
+tr.list-data > td /* Dòng chứa record */ {
+    border: 1px solid #dfdfdf;
+    padding: 3px 5px;
+}
+
+tr.list-data:hover /* Dòng chứa record */ {
+    background: #f6f6f6;
+}
+
+th.id-col /* Cột số thứ tự */ {
+    width: 35px;
+}
+
+th.action-col /* Cột thao tác quản lý */ {
+    width: 65px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/*************************************************
+    THANH PHÂN TRANG (THUẬT TOÁN PHÂN TRANG) 
+ ************************************************/
+.paging_nav {
+    text-align: center;
+    margin-top: 10px;
+}
+.paging_nav span.current_page, .paging_nav a {
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+}
+.paging_nav span.current_page {
+    margin: 0px 3px;
+    padding: 3px 7px;
+    background: url('../images/blue-title.jpg');
+    color: #fff;
+    font-weight: bold;
+}
+.paging_nav a {
+    margin: 0px 3px;
+    padding: 2px 6px;
+    border: 1px solid #ccc;
+    color: #555555;
+    font-weight: bold;
+}
+.paging_nav a:hover {
+    padding: 3px 7px;
+    background: #ccc;
+    border: none;
+    color: #555;
+}

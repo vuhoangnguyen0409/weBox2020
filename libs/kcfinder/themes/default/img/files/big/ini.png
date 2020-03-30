@@ -1,0 +1,66 @@
+<?php
+
+/** This file is part of KCFinder project
+  *
+  *      @desc Abstract image driver class
+  *   @package KCFinder
+  *   @version 3.12
+  *    @author Pavel Tzonkov <sunhater@sunhater.com>
+  * @copyright 2010-2014 KCFinder Project
+  *   @license http://opensource.org/licenses/GPL-3.0 GPLv3
+  *   @license http://opensource.org/licenses/LGPL-3.0 LGPLv3
+  *      @link http://kcfinder.sunhater.com
+  */
+
+namespace kcfinder;
+
+abstract class image {
+    const DEFAULT_JPEG_QUALITY = 75;
+
+/** Image resource or object
+  * @var mixed */
+    protected $image;
+
+/** Image width in pixels
+  * @var integer */
+    protected $width;
+
+/** Image height in pixels
+  * @var integer */
+    protected $height;
+
+/** Init error
+  * @var bool */
+    protected $initError = false;
+
+/** Driver specific options
+  * @var array */
+    protected $options = array();
+
+
+/** Magic method which allows read-only access to all protected or private
+  * class properties
+  * @param string $property
+  * @return mixed */
+
+    final public function __get($property) {
+        return property_exists($this, $property) ? $this->$property : null;
+    }
+
+
+/** Constructor. Parameter $image should be:
+  *   1. An instance of image driver class (copy instance).
+  *   2. An image represented by the type of the $image property
+  *      (resource or object).
+  *   3. An array with two elements. First - width, second - height.
+  *      Creates a blank image.
+  *   4. A filename string. Get image form file.
+  * Second paramaeter is used by pass some specific image driver options
+  * @param mixed $image
+  * @param array $options */
+
+    public function __construct($image, array $options=array()) {
+        $this->image = $this->width = $this->height = null;
+        $imageDetails = $this->buildImage($image);
+
+        if ($imageDetails !== fals

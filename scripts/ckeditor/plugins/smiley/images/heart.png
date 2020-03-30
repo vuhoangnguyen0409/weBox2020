@@ -1,0 +1,23 @@
+<?php
+
+/** {Indonesian} localization file for KCFinder
+  * -Razi Senseio (Author)
+  */
+
+$lang = array(
+
+    '_locale' => "id_ID.UTF-8",  // UNIX localization code
+    '_charset' => "utf-8",       // Browser charset
+
+    // Date time formats. See http://www.php.net/manual/en/function.strftime.php
+    '_dateTimeFull' => "%A, %e %B, %Y %H:%M",
+    '_dateTimeMid' => "%a %e %b %Y %H:%M",
+    '_dateTimeSmall' => "%d.%m.%Y %H:%M",
+
+    "You don't have permissions to upload files." => "Anda tidak punya izin untuk mengunggah file.",
+    "You don't have permissions to browse server." => "Anda tidak punya izin untuk menelusuri server.",
+    "Cannot move uploaded file to target folder." => "Gagal memindahkan file yang di unggah ke target folder.",
+    "Unknown error." => "Error yang tidak diketahui.",
+    "The uploaded file exceeds {size} bytes." => "File yang anda unggah melebihi {size} bytes.",
+    "The uploaded file was only partially uploaded." => "Hanya sebagian file yang anda unggah telah di upload.",
+    "No file was uploaded." => "Tidak ada file yang di unggah.

@@ -1,0 +1,27 @@
+s call can be placed at any point after the
+			// <textarea>, or inside a <head><script> in a
+			// window.onload event handler.
+
+			CKEDITOR.replace( 'editor1', {
+				extraPlugins: 'magicline',	// Ensure that magicline plugin, which is required for this sample, is loaded.
+				allowedContent: true		// Switch off the ACF, so very complex content created to
+											// show magicline's power isn't filtered.
+			} );
+
+		</script>
+	</div>
+	<br>
+	<div>
+		<label for="editor2">
+			Editor 2:
+		</label>
+		<div class="description">
+			<p>
+				This editor is using a blue line.
+			</p>
+<pre class="samples">
+CKEDITOR.replace( 'editor2', {
+	magicline_color: 'blue'
+});</pre>
+		</div>
+		<textarea cols="80" id="edito

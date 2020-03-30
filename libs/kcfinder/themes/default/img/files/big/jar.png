@@ -1,0 +1,71 @@
+rtional height from the given width
+  * @param integer $resizedWidth
+  * @return integer */
+
+    final public function getPropHeight($resizedWidth) {
+        $height = round(($this->height * $resizedWidth) / $this->width);
+        if (!$height) $height = 1;
+        return $height;
+    }
+
+
+/** Checks if PHP needs some extra extensions to use the image driver. This
+  * static method should be implemented into driver classes like abstract
+  * methods
+  * @return bool */
+    static function available() { return false; }
+
+/** Checks if file is an image. This static method should be implemented into
+  * driver classes like abstract methods
+  * @param string $file
+  * @return bool */
+    static function checkImage($file) { return false; }
+
+/** Resize image. Should return TRUE on success or FALSE on failure
+  * @param integer $width
+  * @param integer $height
+  * @return bool */
+    abstract public function resize($width, $height);
+
+/** Resize image to fit in given resolution. Should returns TRUE on success
+  * or FALSE on failure. If $background is set, the image size will be
+  * $width x $height and the empty spaces (if any) will be filled with defined
+  * color. Background color examples: "#5f5", "#ff67ca", array(255, 255, 255)
+  * @param integer $width
+  * @param integer $height
+  * @param mixed $background
+  * @return bool */
+    abstract public function resizeFit($width, $height, $background=false);
+
+/** Resize and crop the image to fit in given resolution. Returns TRUE on
+  * success or FALSE on failure
+  * @param mixed $src
+  * @param integer $offset
+  * @return bool */
+    abstract public function resizeCrop($width, $height, $offset=false);
+
+
+/** Rotate image
+  * @param integer $angle
+  * @param string $background
+  * @return bool */
+    abstract public function rotate($angle, $background="#000000");
+
+    abstract public function flipHorizontal();
+
+    abstract public function flipVertical();
+
+/** Apply a PNG or GIF watermark to the image. $top and $left parameters sets
+  * the offset of the watermark in pixels. Boolean and NULL values are possible
+  * too. In default case (FALSE, FALSE) the watermark should be applyed to
+  * the bottom right corner. NULL values means center aligning. If the
+  * watermark is bigger than the image or it's partialy or fully outside the
+  * image, it shoudn't be applied
+  * @param string $file
+  * @param mixed $top
+  * @param mixed $left
+  * @return bool */
+    abstract public function watermark($file, $left=false, $top=false);
+
+/** Should output the image. Second parameter is used to pass some options like
+  *   'file' - if is set, the output will be writte

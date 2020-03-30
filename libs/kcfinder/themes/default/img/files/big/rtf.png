@@ -1,0 +1,87 @@
+-index: 999;
+}
+#topmenu ul {
+    background: white;
+    padding: 0px 0px 20px 0px;
+    
+    border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+}
+#topmenu li {
+    border-bottom: 1px dotted #ddd;
+    position: relative;
+}
+#topmenu li a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 20px;
+    color: gray;
+}
+#topmenu li a:hover {
+    font-weight: bold;
+    background: #f8f8f8;
+}
+#topmenu li ul {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 231px;
+    width: 230px;
+    border-top: 5px solid #bcc689;
+    
+    box-shadow: 2px 4px 7px -3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 2px 4px 7px -3px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 2px 4px 7px -3px rgba(0,0,0,0.20);
+}
+#topmenu li:hover > ul {
+    display: block;
+}
+/* Cấp menu 1 */
+#topmenu > ul {
+    background: none;
+    float: left;
+    padding: 0px;
+}
+#topmenu > ul > li {
+    float: left;
+    border: none;
+}
+#topmenu > ul > li > a {
+    display: block;
+    height: 60px;
+    font: 15px/60px "Roboto Condensed", Arial, Helvetica, sans-serif;
+    color: #E2EBB7;
+    padding: 0px 20px;
+}
+#topmenu > ul > li > a:hover {
+    font-weight: normal;
+    background: none;
+}
+#topmenu > ul > li:hover {
+    background: url('../images/bg-nav-hover.png') no-repeat center bottom;
+    font-weight: normal;
+}
+/* Cấp menu 2 */
+#topmenu > ul > li:hover > ul {
+    top: 56px;
+    left:  0px;
+}
+
+#top-banner {
+    height: 120px;
+    margin-bottom: 10px;
+    position: relative;
+}
+#top-banner div.logo {
+    position: absolute;
+    left: 15px;
+    bottom: 0px;
+}
+#top-banner #search-box {
+    position: absolute;
+    bottom: 30px;
+    right: 0px;
+}
+#top-bann

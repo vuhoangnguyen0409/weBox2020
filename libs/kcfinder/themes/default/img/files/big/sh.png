@@ -1,0 +1,70 @@
+d: url('../images/icon_readmore.png') no-repeat left center;
+    padding: 0px 0px 0px 26px;
+}
+#intro div.intro-item a.readmore:hover {
+    color: #860850;
+}
+
+/** CONTENT
+------------------------------------------**/
+#content {
+    background: white;
+    /** CSS 3.0 **/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+/** LEFT
+------------------------------------------**/
+#left-col {
+    width: 231px;
+    padding: 0px 10px;
+    float: left;
+    background: url('../images/bg-left.jpg') no-repeat right top;
+}
+#left-col div.module {
+    margin-bottom: 10px;
+}
+#left-col div.module h3 {
+    height: 41px;
+    background: url('../images/bg-module-title.png') no-repeat left top;
+    color: white;
+    font: bold 16px/41px Arial;
+    padding: 0px 10px;
+    /** CSS 3.0 **/
+    border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+}
+#left-col div.module .content {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: 1px dotted #aaa;
+    background: url('../images/bg-module-content.png') no-repeat center top;
+    /** CSS 3.0 **/
+    border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+}
+
+/** LEFT-MENU
+------------------------------------------**/
+#left-menu {
+    background: #768B09 url('../images/bg-module-spotline.png') no-repeat center top;
+    margin-bottom: 10px;
+    /** CSS 3.0 **/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.35);
+}
+#left-menu h3 {
+    height: 41px;
+    font: bold 18px/41px "Roboto Condensed", Arial;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    color: white

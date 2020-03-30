@@ -1,0 +1,43 @@
+<?php
+
+/** Portuguese localization file for KCFinder
+  * author: Hugo Branquinho
+  * country: Portugal
+  * company website: www.framework.pt
+  */
+
+$lang = array(
+
+    '_locale' => "pt_PT.UTF-8",  // UNIX localization code
+    '_charset' => "utf-8",       // Browser charset
+
+    // Date time formats. See http://www.php.net/manual/en/function.strftime.php
+    '_dateTimeFull' => "%A, %e %B, %Y %H:%M",
+    '_dateTimeMid' => "%a %e %b %Y %H:%M",
+    '_dateTimeSmall' => "%d.%m.%Y %H:%M",
+
+    "You don't have permissions to upload files." =>
+    "Não tem permissão para enviar ficheiros.",
+
+    "You don't have permissions to browse server." =>
+    "Não tem permissão para navegar no servidor.",
+
+    "Cannot move uploaded file to target folder." =>
+    "Não pode mover ficheiros enviados para a pasta definida.",
+
+    "Unknown error." =>
+    "Erro indefinido.",
+
+    "The uploaded file exceeds {size} bytes." =>
+    "O ficheiro enviado tem mais que {size} bytes.",
+
+    "The uploaded file was only partially uploaded." =>
+    "O ficheiro foi apenas enviado parcialmente.",
+
+    "No file was uploaded." =>
+    "Nenhum ficheiro enviado.",
+
+    "Missing a temporary folder." =>
+    "Falta a pasta temporária.",
+
+ 

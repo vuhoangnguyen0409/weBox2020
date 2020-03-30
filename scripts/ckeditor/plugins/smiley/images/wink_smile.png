@@ -1,0 +1,25 @@
+<?php
+
+/** Slovak localization file for KCFinder
+  * author: drejk1 <drejk@inmail.sk>
+  */
+
+$lang = array(
+
+    '_locale' => "sk_SK.UTF-8",  // UNIX localization code
+    '_charset' => "utf-8",       // Browser charset
+
+    // Date time formats. See http://www.php.net/manual/en/function.strftime.php
+    '_dateTimeFull' => "%A, %e.%B.%Y %H:%M",
+    '_dateTimeMid' => "%a %e %b %Y %H:%M",
+    '_dateTimeSmall' => "%d.%m.%Y %H:%M",
+
+    "You don't have permissions to upload files." => "Nemáte právo nahrávať súbory.",
+    "You don't have permissions to browse server." => "Nemáte právo prehliadať súbory na serveri.",
+    "Cannot move uploaded file to target folder." => "Nie je možné presunúť súbor do zvoleného adresára.",
+    "Unknown error." => "Neznáma chyba.",
+    "The uploaded file exceeds {size} bytes." => "Nahratý súbor presahuje {size} bytov.",
+    "The uploaded file was only partially uploaded." => "Nahratý súbor bol nahraný len čiastočne.",
+    "No file was uploaded." => "Žiadný súbor nebol nahraný na server.",
+    "Missing a temporary folder." => "Chyba dočasný adresár.",
+    "Failed to write file." => "Súbor sa nepodarilo uložiť.",

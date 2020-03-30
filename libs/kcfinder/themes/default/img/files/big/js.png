@@ -1,0 +1,110 @@
+us: 4px;
+}
+div.file:hover {
+    box-shadow: inset 0 0 7px #555, inset 0 0 3px #555, 0 0 3px #000, 0 0 6px #000;
+    background: #000;
+    background: -webkit-linear-gradient(top, #111, #555);
+    background: -moz-linear-gradient(top, #111, #555);
+    background: -ms-linear-gradient(top, #111, #555);
+    background: -o-linear-gradient(top, #111, #555);
+    background: linear-gradient(to bottom, #111, #555);
+    border-color: #555;
+}
+div.file .name {
+    margin-top: 4px;
+    font-weight: bold;
+    height: 16px;
+    overflow: hidden;
+    padding-bottom:2px;
+}
+div.file .time {
+    font-size: 10px;
+}
+div.file .size {
+    font-size: 10px;
+}
+#files div.selected,
+#files div.selected:hover {
+    border-color: #4685b3;
+    background: #4685b3;
+    background: -webkit-linear-gradient(top, #4685b3, #184977);
+    background: -moz-linear-gradient(top, #4685b3, #184977);
+    background: -ms-linear-gradient(top, #4685b3, #184977);
+    background: -o-linear-gradient(top, #4685b3, #184977);
+    background: linear-gradient(to bottom, #4685b3, #184977);
+    box-shadow: inset 0 0 7px #4e9ed4, inset 0 0 3px #4e9ed4, 0 0 3px #000, 0 0 6px #000;
+}
+tr.file > td {
+    padding: 3px 4px;
+}
+tr.file:hover > td {
+    background-color: #000;
+    transition: none;
+}
+tr.selected > td,
+tr.selected:hover > td {
+    transition: .3s;
+    background-color: #2d5277;
+}
+tr.file td.name {
+    background-position: 2px center;
+    padding-left: 22px;
+}
+a.denied {
+    color: #666;
+    opacity: 0.5;
+    filter: alpha(opacity:50);
+    cursor: default;
+}
+a.denied:hover {
+    background-color: #e4e3e2;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* FILE MENU */
+
+#menu .ui-menu a span {
+    background: left center no-repeat;
+    padding-left: 20px;
+    white-space: nowrap;
+}
+#menu a[href="kcact:refresh"] span {
+    background-image: url(img/icons/refresh.png);
+}
+#menu a[href="kcact:mkdir"] span {
+    background-image: url(img/icons/folder-new.png);
+}
+#menu a[href="kcact:mvdir"] span, #menu a[href="kcact:mv"] span {
+    background-image: url(img/icons/rename.png);
+}
+#menu a[href="kcact:rmdir"] span, #menu a[href="kcact:rm"] span, #menu a[href="kcact:rmcbd"] span {
+    background-image: url(img/icons/delete.png);
+}
+#menu a[href="kcact:clpbrdadd"] span {
+    background-image: url(img/icons/clipboard-add.png);
+}
+#menu a[href="kcact:pick"] span, #menu a[href="kcact:pick_thumb"] span {
+    background-image: url(img/icons/select.png);
+}
+#menu a[href="kcact:download"] span {
+    background-image: url(img/icons/download.png);
+}
+#menu a[href="kcact:view"] span {
+    background-image: url(img/icons/view.png);
+}
+#menu a[href="kcact:cpcbd"] span {
+    background-image: url(img/icons/copy.png);
+}
+#menu a[href="kcact:mvcbd"] span {
+    background-image: url(img/icons/move.png);
+}
+#menu a[href="kcact:clrcbd"] span {
+    background-image: url(img/icons/clipboard-clear.png);
+}
+
+/* CLIPBOARD */
+
+#clipboard {
+    margin-left:-3px;
+    paddin
