@@ -9,7 +9,7 @@
 $hostname = 'localhost';
 $hostuser = 'root';
 $hostpass = '';
-$dbname = 'phpnc75_json';
+$dbname = 'phpnc74_json';
 
 /** Cấu hình tiếp đầu ngữ cho session **/
 $prefix = 'phpnc75_';
