@@ -1,0 +1,9 @@
+FTP Server:    ftp.chuphinhphuquoc.com
+Login:    webdemo
+Password:    rcK78mJj
+Database:	webdemo_db
+Username:	webdemo_user
+Password:	3MxNtJil
+
+
+http://45.117.171.204/phpmyadmin/

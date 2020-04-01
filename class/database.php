@@ -26,7 +26,7 @@ class Database {
             //$sql_add = 'insert into user(username, password, level) values("hahaha", "qwer1234", 1)';
             //self::$conn->query($sql_add);
             //die();
-            //self::$conn->set_charset("utf8");
+            self::$conn->set_charset("utf8");
         }
     }
 
@@ -35,11 +35,8 @@ class Database {
     }
 
     public function query($sql) {
-        echo 2;
-        if (is_resource(self::$conn)) {
-            //var_dump(mysqli_query($sql));
-            //die();
-            $this->queryResult = mysqli_query($sql);
+        if (self::$conn) {
+            $this->queryResult = mysqli_query(self::$conn,$sql);
         }
     }
 
