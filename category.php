@@ -21,16 +21,16 @@ include("templates/header.php");
 
 //Kết nối CSDL
 include("libs/connect_db.php");
-            
+
 // Lấy tất cả tin trong danh mục
 $sql = '
-SELECT * 
-FROM news, category, user 
-WHERE news.cateid=category.cateid AND news.userid=user.userid AND news_public="Y" AND news.cateid="' .$id. '" 
-ORDER BY newsid DESC 
+SELECT *
+FROM news, category, user
+WHERE news.cateid=category.cateid AND news.userid=user.userid AND news_public="Y" AND news.cateid="' .$id. '"
+ORDER BY newsid DESC
 LIMIT 0, 5';
-$query = mysql_query($sql, $conn);
-while ($data = mysql_fetch_assoc($query)) {
+$query = $mysqli->query($sql);
+while ($data = $query -> fetch_assoc()) {
     $link = 'tin-tuc/' .$data["cateid"]. '-' .noneUniAlias($data["cate_name"], true). '/' .$data["newsid"]. '-' .noneUniAlias($data["news_title"], true). '.html';
     echo '
     <div class="news_intro clear-fix">
@@ -45,7 +45,7 @@ while ($data = mysql_fetch_assoc($query)) {
         <a href="' .$link. '" class="readmore">Đọc thêm</a>
     </div>';
 }
-    
+
 // Gọi phần footer của giao diện
 include("templates/footer.php");
 
