@@ -51,8 +51,10 @@ echo '
                 <div class="input-item">
                     <input type="text" name="sitename"';
                     if (isset($_POST["sitename"])) {
+                        // set sitename mới
                         echo ' value="' .htmlspecialchars($_POST["sitename"]). '"';
                     } else {
+                        // load sitename hiện tại
                         echo ' value="' .htmlspecialchars($settingValue["sitename"]). '"';
                     }
                     echo ' />

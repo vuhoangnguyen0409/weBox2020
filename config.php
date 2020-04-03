@@ -15,7 +15,7 @@ $dbname = 'phpnc74_json';
 $prefix = 'phpnc75_';
 
 /** Cấu hình đường dẫn đến site (dùng cho KCFinder) **/
-$siteURL = 'http://localhost/weBox2020';
+$siteURL = 'http://webox2020.local/';
 
 /** Cấu hình cho username **/
 $username_min_len = 5;
