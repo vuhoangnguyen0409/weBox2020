@@ -1,5 +1,5 @@
 Options -Indexes
 RewriteEngine on
-RewriteRule ^tin-tuc/\d+-[a-z0-9-]+/(\d+)-[a-z0-9-]+\.html$ /phpnc75/08-htaccess/training/detail.php?id=$1 [NC,L]
-RewriteRule ^tin-tuc/(\d+)-[a-z0-9-]+/index\.html$ /phpnc75/08-htaccess/training/category.php?id=$1 [NC,L]
-RewriteRule ^index.html$ /phpnc75/08-htaccess/training/index.php [NC,L]
+RewriteRule ^tin-tuc/\d+-[a-z0-9-]+/(\d+)-[a-z0-9-]+\.html$ /detail.php?id=$1 [NC,L]
+RewriteRule ^tin-tuc/(\d+)-[a-z0-9-]+/index\.html$ /category.php?id=$1 [NC,L]
+RewriteRule ^index.html$ /weBox2020/index.php [NC,L]
