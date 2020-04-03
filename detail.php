@@ -21,11 +21,12 @@ include("templates/header.php");
 
 //Kết nối CSDL
 include("libs/connect_db.php");
-            
+
 // Lấy ban tin
 $sql = 'SELECT * FROM news as n, category as c, user as u WHERE news_public="Y" AND newsid="' .$id. '" AND n.userid=u.userid AND n.cateid=c.cateid';
-$query = mysql_query($sql, $conn);
-$data = mysql_fetch_assoc($query);
+var_dump($sql);
+$query = $mysqli->query($sql);
+$data = $query -> fetch_assoc();
     echo '
     <div class="news">
         <h1>' .$data["news_title"]. '</h1>
@@ -49,13 +50,13 @@ $data = mysql_fetch_assoc($query);
         <h2>Bình Luận Bản Tin:</h2>
         <div id="comment_content">';
         // Lấy tất cả comment (của riêng bản tin này) show ra trang
-        $sql_comment = 'select * from comment, user where comment.userid=user.userid and newsid='.$id.' order by commentid ASC';
-        $query_comment = mysql_query($sql_comment, $conn);
-        while ($data_comment = mysql_fetch_assoc($query_comment)) {
+        $sql_comment = 'select * from comments, user where comments.userid=user.userid and newsid='.$id.' order by commentid ASC';
+        $query_comment = $mysqli->query($sql_comment);
+        while ($data_comment = $query_comment -> fetch_assoc()) {
             echo '
             <div class="comment_item">
                 <h3>' .$data_comment["username"]. ':</h3>
-                <div>' .$data_comment["content"]. '</div>
+                <div>' .$data_comment["comment_content"]. '</div>
             </div>';
         }
         echo '</div>
@@ -87,7 +88,7 @@ $data = mysql_fetch_assoc($query);
             </fieldset>
         </form>
     </div><!-- End #comment -->';
-    
+
 // Gọi phần footer của giao diện
 include("templates/footer.php");
 
