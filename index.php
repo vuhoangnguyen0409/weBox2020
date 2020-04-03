@@ -14,16 +14,16 @@ include("templates/header.php");
 
 //Kết nối CSDL
 require("libs/connect_db.php");
-            
+
 // Lấy tin mới nhất để hiển thị trên trang chủ
 $sql = '
-SELECT * 
-FROM news, category, user 
-WHERE news.cateid=category.cateid AND news.userid=user.userid AND news_public="Y" 
-ORDER BY newsid DESC 
+SELECT *
+FROM news, category, user
+WHERE news.cateid=category.cateid AND news.userid=user.userid AND news_public="Y"
+ORDER BY newsid DESC
 LIMIT 0, 5';
-$query = mysql_query($sql, $conn);
-while ($data = mysql_fetch_assoc($query)) {
+$query = $mysqli->query($sql);
+while ($data = $query -> fetch_assoc()) {
     $link = 'tin-tuc/' .$data["cateid"]. '-' .noneUniAlias($data["cate_name"], true). '/' .$data["newsid"]. '-' .noneUniAlias($data["news_title"], true). '.html';
     echo '
     <div class="news_intro clear-fix">

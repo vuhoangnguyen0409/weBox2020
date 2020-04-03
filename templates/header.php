@@ -14,7 +14,7 @@ echo '<!DOCTYPE HTML>
     <link rel="stylesheet" href="templates/css/default.css" />
     <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="scripts/myscripts.js"></script>
-    
+
     <title>' .SITENAME. '</title>
 </head>
 
@@ -32,12 +32,12 @@ echo '<!DOCTYPE HTML>
                     <ul>';
                     //Kết nối CSDL
                     require("libs/connect_db.php");
-                        
+
                     // Lấy tất cả các danh mục tin tạo thành các liên kết
                     $sql = 'SELECT * FROM category ORDER BY cate_name ASC';
-                    $query = mysql_query($sql, $conn);
+                    $query = $mysqli->query($sql);;
                     $menu = array();
-                    while ($data = mysql_fetch_assoc($query)) {
+                    while ($data = $query -> fetch_assoc()) {
                         $menu[] = $data;
                     }
                     foreach ($menu as $item) {
