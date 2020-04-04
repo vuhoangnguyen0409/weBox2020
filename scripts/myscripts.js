@@ -91,7 +91,9 @@ $(document).ready(function() {
                 if (kq_signin == 'Miss') {
                     $("#signin_msg").html('<div class="error_msg">Vui lòng nhập đầy đủ thông tin</div>');
                 }
-                else {
+                else if (kq_signin == 'Duplicate') {
+                    $("#signin_msg").html('<div class="error_msg">Vui lòng chọn email khác</div>');
+                } else {
                     $("#signin_msg").html(kq_signin);
                     // Reset form
                     document.fLogin.reset();

@@ -159,6 +159,7 @@ echo '<!DOCTYPE HTML>
                                     <input type="password" name="signin_userPass" id="signin_userPass" placeholder="Mật khẩu" />
                                 </div>
                             </div>
+
                             <div>
                                 <input type="submit" name="btnSignin" id="btnSignin" value="Đăng Ký" />
                             </div>
