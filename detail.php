@@ -24,7 +24,7 @@ include("libs/connect_db.php");
 
 // Lấy ban tin
 $sql = 'SELECT * FROM news as n, category as c, user as u WHERE news_public="Y" AND newsid="' .$id. '" AND n.userid=u.userid AND n.cateid=c.cateid';
-var_dump($sql);
+//var_dump($sql);
 $query = $mysqli->query($sql);
 $data = $query -> fetch_assoc();
     echo '

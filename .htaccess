@@ -2,4 +2,4 @@ Options -Indexes
 RewriteEngine on
 RewriteRule ^tin-tuc/\d+-[a-z0-9-]+/(\d+)-[a-z0-9-]+\.html$ /detail.php?id=$1 [NC,L]
 RewriteRule ^tin-tuc/(\d+)-[a-z0-9-]+/index\.html$ /category.php?id=$1 [NC,L]
-RewriteRule ^index.html$ /weBox2020/index.php [NC,L]
+RewriteRule ^index.html$ /index.php [NC,L]
