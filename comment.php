@@ -15,17 +15,18 @@ if (empty($_POST["content"]) || empty($_POST["newsid"]) || !User::isLogined()) {
     $user = $_SESSION[$prefix."userid"];
     require("libs/connect_db.php");
     // Thêm comment vào CSDL
-    $sql_add = 'insert into comment(content, newsid, userid) values("' .$content. '", ' .$newsid. ', ' .$user. ')';
-    mysql_query($sql_add, $conn);
-    
+    $sql_add = 'insert into comments(comment_content, newsid, userid) values("' .$content. '", ' .$newsid. ', ' .$user. ')';
+    //mysql_query($sql_add, $conn);
+    $mysqli->query($sql_add);
+
     // Lấy ra tất cả comment của bản tin hiện tại
-    $sql_comment = 'select * from comment, user where comment.userid=user.userid and newsid='.$newsid.' order by commentid ASC';
-    $query_comment = mysql_query($sql_comment, $conn);
-    while ($data_comment = mysql_fetch_assoc($query_comment)) {
+    $sql_comment = 'select * from comments, user where comments.userid=user.userid and newsid='.$newsid.' order by commentid ASC';
+    $query_comment = $mysqli->query($sql_comment);
+    while ($data_comment = $query_comment -> fetch_assoc()) {
         echo '
         <div class="comment_item">
             <h3>' .$data_comment["username"]. ':</h3>
-            <div>' .$data_comment["content"]. '</div>
+            <div>' .$data_comment["comment_content"]. '</div>
         </div>';
     }
 }
