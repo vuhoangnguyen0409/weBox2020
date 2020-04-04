@@ -7,9 +7,12 @@
 
 require('phpnc75_platform.php');
 sleep(1);
-if (empty($_POST["user"]) || empty($_POST["pass"]) || empty($_POST["email"]) || empty($_POST["tel"]) ) {
+if (empty($_POST["user"]) || empty($_POST["pass"]) || empty($_POST["repass"]) || empty($_POST["email"]) || empty($_POST["tel"]) ) {
     //echo '<script>alert(2);</script>';
     echo 'Miss';
+}
+elseif ($_POST["pass"] != $_POST["repass"]) {
+    echo 'PwError';
 }   else {
         //check email da ton tai
         $signin = new User($_POST["user"], $_POST["pass"], 2, $_POST["email"], $_POST["tel"] );

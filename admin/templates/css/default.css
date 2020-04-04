@@ -95,7 +95,7 @@ input:focus, textarea {
     outline: none;
 }
 
-input[type=text], input[type=password], textarea, select {
+input[type=text], input[type=password], input[type="email"], input[type="tel"], textarea, select {
     display: block;
     width: 100%;
     border: 1px solid #ccc;
@@ -217,7 +217,7 @@ input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
 #main {
     padding: 25px;
     background-color: white;
-    
+
 }
 
 #bottom{
@@ -259,7 +259,7 @@ div.module .content {
 
 
 /********************************
-    DÙNG CHO TRANG CHÍNH 
+    DÙNG CHO TRANG CHÍNH
  *******************************/
 table.function-table {
     border-spacing: 10px;
@@ -387,7 +387,7 @@ th.action-col /* Cột thao tác quản lý */ {
 }
 
 /*************************************************
-    THANH PHÂN TRANG (THUẬT TOÁN PHÂN TRANG) 
+    THANH PHÂN TRANG (THUẬT TOÁN PHÂN TRANG)
  ************************************************/
 .paging_nav {
     text-align: center;

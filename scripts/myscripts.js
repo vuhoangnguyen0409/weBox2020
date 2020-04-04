@@ -80,19 +80,23 @@ $(document).ready(function() {
         //alert(2);
         var user = $("#signin_userName").val();
         var pass = $("#signin_userPass").val();
+        var repass = $("#signin_userRePass").val();
         var email = $("#signin_userEmail").val();
         var tel = $("#signin_usertel").val();
         $.ajax({
             "url": "signin.php",
             "type": "post",
             "async": true,
-            "data": "user="+user+"&pass="+pass+"&email="+email+"&tel="+tel,
+            "data": "user="+user+"&pass="+pass+"&repass="+repass+"&email="+email+"&tel="+tel,
             "success": function(kq_signin) {
                 if (kq_signin == 'Miss') {
                     $("#signin_msg").html('<div class="error_msg">Vui lòng nhập đầy đủ thông tin</div>');
                 }
                 else if (kq_signin == 'Duplicate') {
                     $("#signin_msg").html('<div class="error_msg">Vui lòng chọn email khác</div>');
+                }
+                else if (kq_signin == 'PwError') {
+                    $("#signin_msg").html('<div class="error_msg">Mật khẩu không khớp</div>');
                 } else {
                     $("#signin_msg").html(kq_signin);
                     // Reset form

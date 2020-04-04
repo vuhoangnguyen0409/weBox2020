@@ -160,6 +160,13 @@ echo '<!DOCTYPE HTML>
                                 </div>
                             </div>
 
+                            <div class="input-group">
+                                <label class="password"></label>
+                                <div class="input-item">
+                                    <input type="password" name="signin_userRePass" id="signin_userRePass" placeholder="Nhập lại mật khẩu" />
+                                </div>
+                            </div>
+
                             <div>
                                 <input type="submit" name="btnSignin" id="btnSignin" value="Đăng Ký" />
                             </div>
