@@ -20,7 +20,7 @@ $(document).ready(function() {
                     document.fLogin.reset();
                     // ẩn form đăng nhập
                     $("#fLogin").fadeOut(300);
-                    
+
                     // Xóa bỏ nội dung vùng comment_msg, cho hiện vùng comment_element
                     $("#comment_msg").empty();
                     $("#comment_element").fadeIn(300);
@@ -29,7 +29,7 @@ $(document).ready(function() {
         });
         return false;
     });
-    
+
     // Sự kiện đăng xuất
     $(document).on("click", "input[name=btnLogout]", function() {
         $.ajax({
@@ -40,7 +40,7 @@ $(document).ready(function() {
                 if (kq_logout == 'Finish') {
                     $("#login_msg").empty();
                     $("#fLogin").fadeIn(300);
-                    
+
                     // Cập nhật nội dung vùng comment_msg, cho ẩn vùng comment_element
                     $("#comment_msg").html('Vui lòng đăng nhập để bình luận cho bản tin');
                     $("#comment_element").fadeOut(300);
@@ -49,7 +49,7 @@ $(document).ready(function() {
         });
         return false;
     });
-    
+
     // Sự kiện comment
     $("#fComment #btnComment").click(function() {
         $("#comment_msg").html('<img src="templates/images/loading.gif" />');
@@ -69,6 +69,32 @@ $(document).ready(function() {
                     document.fComment.reset();
                     // Xóa nội dung vùng thông báo
                     $("#comment_msg").empty();
+                }
+            }
+        });
+        return false;
+    });
+
+    // Sự kiện đăng ký
+    $("#fSignin #btnSignin").click(function() {
+        //alert(2);
+        var user = $("#signin_userName").val();
+        var pass = $("#signin_userPass").val();
+        var email = $("#signin_userEmail").val();
+        var tel = $("#signin_usertel").val();
+        $.ajax({
+            "url": "signin.php",
+            "type": "post",
+            "async": true,
+            "data": "user="+user+"&pass="+pass+"&email="+email+"&tel="+tel,
+            "success": function(kq_signin) {
+                if (kq_signin == 'Miss') {
+                    $("#signin_msg").html('<div class="error_msg">Vui lòng nhập đầy đủ thông tin</div>');
+                }
+                else {
+                    $("#signin_msg").html(kq_signin);
+                    // Reset form
+                    document.fLogin.reset();
                 }
             }
         });

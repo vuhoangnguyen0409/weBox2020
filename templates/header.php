@@ -75,7 +75,7 @@ echo '<!DOCTYPE HTML>
                         <li><a href="#">Liên Hệ</a></li>
                     </ul>
                 </div><!-- End leftmenu -->
-                <div id="login">
+                <div id="login" class="dang nhap">
                     <h1>
                         Đăng Nhập
                     </h1>
@@ -119,6 +119,48 @@ echo '<!DOCTYPE HTML>
                             </div>
                             <div>
                                 <input type="submit" name="btnLogin" id="btnLogin" value="Đăng nhập" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="login" class="dangky">
+                    <h1>
+                        Đăng Ký
+                    </h1>
+                    <div class="content">
+                        <div id="signin_msg">';
+
+                        echo '</div>';
+                        echo '<form name="fSignin" id="fSignin" action="#" method="post">
+                            <div class="input-group">
+                                <label class="username"></label>
+                                <div class="input-item">
+                                    <input type="text" name="signin_userName" id="signin_userName" placeholder="Tên đăng ký" />
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label class="useremail"></label>
+                                <div class="input-item">
+                                    <input type="email" name="signin_userEmail" id="signin_userEmail" placeholder="Email đăng ký" required />
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label class="usertel"></label>
+                                <div class="input-item">
+                                    <input type="tel" name="signin_userTel" id="signin_userTel" placeholder="SDT đăng ký" required />
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label class="password"></label>
+                                <div class="input-item">
+                                    <input type="password" name="signin_userPass" id="signin_userPass" placeholder="Mật khẩu" />
+                                </div>
+                            </div>
+                            <div>
+                                <input type="submit" name="btnSignin" id="btnSignin" value="Đăng Ký" />
                             </div>
                         </form>
                     </div>
