@@ -19,10 +19,19 @@ if (isset($_POST["btnUserAdd"])) {
         ErrorHandler::setError('Vui lòng nhập password');
     } elseif ($_POST["txtRePass"] != $_POST["txtPass"]) {
         ErrorHandler::setError('hai ô mật khẩu không trùng nhau');
+    } elseif (empty($_POST["email"])) {
+        ErrorHandler::setError('Vui lòng nhập Email');
+    } elseif (empty($_POST["tel"])) {
+        ErrorHandler::setError('Vui lòng nhập SDT');
     } else {
-        $user = new User($_POST["txtUser"], $_POST["txtPass"], $_POST["rdoLevel"]);
+        $user = new User($_POST["txtUser"], $_POST["txtPass"], $_POST["rdoLevel"], $_POST["email"], $_POST["tel"]);
+        //var_dump($user);
+        //die();
         if ($user->existsUsername()) {
             ErrorHandler::setError('<i>Username này đã tồn tại. Vui lòng chọn username khác</i>');
+        }
+        elseif ($user->existsEmail()) {
+            ErrorHandler::setError('<i>Email này đã tồn tại. Vui lòng chọn username khác</i>');
         } else {
             $user->addUser();
             header("location: user_list.php");
@@ -67,6 +76,18 @@ echo '
                 <label>Confirm password:</label>
                 <div class="input-item">
                     <input type="password" name="txtRePass" />
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Email:</label>
+                <div class="input-item">
+                    <input type="email" name="email" />
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Phone:</label>
+                <div class="input-item">
+                    <input type="tel" name="tel" />
                 </div>
             </div>
             <div class="input-group">

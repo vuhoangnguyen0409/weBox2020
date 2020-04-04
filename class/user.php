@@ -9,12 +9,16 @@ class User extends Database {
     protected $username;
     protected $password;
     protected $level;
+    protected $email;
+    protected $tel;
 
-    public function __construct($username=null, $password=null, $level=null) {
+    public function __construct($username=null, $password=null, $level=null, $email=null, $tel=null) {
         parent::__construct();
         $this->setUsername($username);
         $this->setPassword($password);
         $this->setLevel($level);
+        $this->setEmail($email);
+        $this->setTel($tel);
     }
 
     public function setUsername($username) {
@@ -45,6 +49,26 @@ class User extends Database {
 
     public function getLevel() {
         return $this->level;
+    }
+
+    public function setEmail($email) {
+        if (!empty($email)) {
+            $this->email = $email;
+        }
+    }
+
+    public function getEmail() {
+        return $this->email;
+    }
+
+    public function setTel($tel) {
+        if (!empty($tel)) {
+            $this->tel = $tel;
+        }
+    }
+
+    public function getTel() {
+        return $this->tel;
     }
 
     public function checkLogin() {
@@ -106,9 +130,19 @@ class User extends Database {
         }
     }
 
+    public function existsEmail() {
+        $sql = 'select userid from user where email="' .$this->email. '"';
+        $this->query($sql);
+        if ($this->numrows() == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     public function addUser() {
-        if (!empty($this->username) && !empty($this->password) && !empty($this->level) && !$this->existsUsername()) {
-            $sql = 'insert into user(username, password, level) values("' .$this->username. '", "' .$this->password. '", ' .$this->level. ')';
+        if (!empty($this->username) && !empty($this->password) && !empty($this->level) && !empty($this->email) && !empty($this->tel) && !$this->existsUsername() && !$this->existsEmail()) {
+            $sql = 'insert into user(username, password, level, email, tel) values("' .$this->username. '", "' .$this->password. '", ' .$this->level. ', "' .$this->email. '", "' .$this->tel. '")';
             $this->query($sql);
         }
     }
@@ -120,6 +154,8 @@ class User extends Database {
         $this->username = $data["username"];
         $this->password = $data["password"];
         $this->level = $data["level"];
+        $this->email = $data["email"];
+        $this->tel = $data["tel"];
     }
 
     public function checkDelPermission($id) {
@@ -166,7 +202,7 @@ class User extends Database {
     }
 
     public function editUser($id) {
-        $sql = 'update user set password="' .$this->password. '", level=' .$this->level. ' where userid='.$id;
+        $sql = 'update user set password="' .$this->password. '", level=' .$this->level. ', email="' .$this->email. '", tel="' .$this->tel. '"  where userid='.$id;
         $this->query($sql);
     }
 
