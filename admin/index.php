@@ -17,9 +17,11 @@ $total_news = $news->totalNews();
 // Chuẩn bị cho giao diện
 $admin_function = 'Trang Chính';
 $custon_menu = array(
+    '../index.php' => 'Xem website',
     'user_list.php' => 'Quản lý user',
     'cate_list.php' => 'Quản lý danh mục',
     'news_list.php' => 'Quản lý tin',
+    'comment_list.php' => 'Quản lý bình luận',
     'site_setting.php' => 'Cấu hình site'
 );
 
@@ -57,6 +59,11 @@ require('templates/header_default.php');
                     </td>
                     <td class="function-item news-list">
                         <a href="news_list.php">Quản lý tin</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="function-item news-list">
+                        <a href="comment_list.php">Quản lý comment</a>
                     </td>
                 </tr>
             </table>
