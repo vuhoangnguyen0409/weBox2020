@@ -38,4 +38,8 @@ $siteSetting = $setting->loadSetting('SiteSetting');
 date_default_timezone_set($siteSetting["local_timezone"]); // Không thay đổi
 define("SITENAME", $siteSetting["sitename"]);
 
+/** Cấu hình phân trang **/
+$rowPerPage = 5;
+$pagePerSegment = 3;
+
 ?>

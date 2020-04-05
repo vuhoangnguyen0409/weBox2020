@@ -110,8 +110,11 @@ class User extends Database {
         }
     }
 
-    public function listAllUser() {
+    public function listAllUser($limit=null) {
         $sql = 'select * from user order by userid DESC';
+        if (!empty($limit)) {
+            $sql .= ' '.$limit;
+        }
         $this->query($sql);
         $data = array();
         while ($row = $this->fetch()) {

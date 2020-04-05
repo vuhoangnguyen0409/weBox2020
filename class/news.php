@@ -2,7 +2,7 @@
 
 /**
  * Class for working with news item on site
- * 
+ *
  * @author Jackie Do
  * @copyright 2014
  * @version 1.0
@@ -18,11 +18,11 @@ class News extends Database {
     protected $newsDate;
     protected $newsCate;
     protected $newsPoster;
-    
+
     /**
      * Set title for a news item
      * =========================
-     * @param string newsTitle 
+     * @param string newsTitle
      **/
     public function setNewsTitle($newsTitle) {
         if (!empty($newsTitle)) {
@@ -30,7 +30,7 @@ class News extends Database {
             $this->newsTitle = strip_tags($newsTitle);
         }
     }
-    
+
     /**
      * Get title of a news item
      * ========================
@@ -39,11 +39,11 @@ class News extends Database {
     public function getNewsTitle() {
         return $this->newsTitle;
     }
-    
+
     /**
      * Set source for a news item
      * ==========================
-     * @param string newsSource 
+     * @param string newsSource
      **/
     public function setNewsSource($newsSource) {
         if (!empty($newsSource)) {
@@ -51,7 +51,7 @@ class News extends Database {
             $this->newsSource = strip_tags($newsSource);
         }
     }
-    
+
     /**
      * Get source of a news item
      * =========================
@@ -60,18 +60,18 @@ class News extends Database {
     public function getNewsSource() {
         return $this->newsSource;
     }
-    
+
     /**
      * Set intro for a news item
      * =========================
-     * @param string newsIntro 
+     * @param string newsIntro
      **/
     public function setNewsIntro($newsIntro) {
         if (!empty($newsIntro)) {
             $this->newsIntro = trim($newsIntro);
         }
     }
-    
+
     /**
      * Get intro of a news item
      * ========================
@@ -80,18 +80,18 @@ class News extends Database {
     public function getNewsIntro() {
         return $this->newsIntro;
     }
-    
+
     /**
      * Set full content for a news item
      * ================================
-     * @param string newsFull 
+     * @param string newsFull
      **/
     public function setNewsFull($newsFull) {
         if (!empty($newsFull)) {
             $this->newsFull = trim($newsFull);
         }
     }
-    
+
     /**
      * Get full content of a news item
      * ===============================
@@ -100,11 +100,11 @@ class News extends Database {
     public function getNewsFull() {
         return $this->newsFull;
     }
-    
+
     /**
      * Set news images for a news item
      * ===============================
-     * @param string newsImg 
+     * @param string newsImg
      **/
     public function setNewsImg($newsImg) {
         if (!empty($newsImg)) {
@@ -115,7 +115,7 @@ class News extends Database {
             }
         }
     }
-    
+
     /**
      * Get news images of a news item
      * ==============================
@@ -124,18 +124,18 @@ class News extends Database {
     public function getNewsImg() {
         return $this->newsImg;
     }
-    
+
     /**
      * Set public for a news item
      * ==========================
-     * @param string newsPublic 
+     * @param string newsPublic
      **/
     public function setNewsPublic($newsPublic) {
         if (!empty($newsPublic)) {
             $this->newsPublic = trim($newsPublic);
         }
     }
-    
+
     /**
      * Get public of a news item
      * =========================
@@ -144,18 +144,18 @@ class News extends Database {
     public function getNewsPublic() {
         return $this->newsPublic;
     }
-    
+
     /**
      * Set date of post for a news item
      * ================================
-     * @param int newsDate 
+     * @param int newsDate
      **/
     public function setNewsDate($newsDate) {
         if (!empty($newsDate)) {
             $this->newsDate = (int)$newsDate;
         }
     }
-    
+
     /**
      * Get date of poster of a news item
      * =================================
@@ -164,18 +164,18 @@ class News extends Database {
     public function getNewsDate() {
         return $this->newsDate;
     }
-    
+
     /**
      * Set category id for a news item
      * ===============================
-     * @param int newsCate 
+     * @param int newsCate
      **/
     public function setNewsCate($newsCate) {
         if (!empty($newsCate)) {
             $this->newsCate = (int)$newsCate;
         }
     }
-    
+
     /**
      * Get category id of a news item
      * ==============================
@@ -184,18 +184,18 @@ class News extends Database {
     public function getNewsCate() {
         return $this->newsCate;
     }
-    
+
     /**
      * Set poster id for a news item
      * =============================
-     * @param int newsPoster 
+     * @param int newsPoster
      **/
     public function setNewsPoster($newsPoster) {
         if (!empty($newsPoster)) {
             $this->newsPoster = (int)$newsPoster;
         }
     }
-    
+
     /**
      * Get poster id of a news item
      * ============================
@@ -204,7 +204,7 @@ class News extends Database {
     public function getNewsPoster() {
         return $this->newsPoster;
     }
-    
+
     /**
      * Count total news in database
      * ============================
@@ -216,7 +216,7 @@ class News extends Database {
         $data = $this->fetch();
         return (int)$data["total_news"];
     }
-    
+
     /**
      * List all news item on site
      * ==========================
@@ -234,7 +234,7 @@ class News extends Database {
         };
         return $data;
     }
-    
+
     /**
      * Check accept upload news images
      * ===============================
@@ -253,7 +253,7 @@ class News extends Database {
             return false;
         }
     }
-    
+
     /**
      * Upload an images to site through form
      * =====================================
@@ -262,12 +262,12 @@ class News extends Database {
     public function uploadNewsImg($formElementName) {
         if ($_FILES[$formElementName]["error"] != 0 || empty($this->newsImg)) {
             return false;
-        } else {    
+        } else {
             move_uploaded_file($_FILES[$formElementName]["tmp_name"], '../data/news_img/'.$this->newsImg);
             return true;
         }
     }
-    
+
     /**
      * Insert news item information into DBMS
      * ======================================
@@ -281,7 +281,7 @@ class News extends Database {
         $sql = 'insert into news(news_title, news_source, news_intro, news_full, news_img, news_public, news_date, userid, cateid) values("' .$title. '", "' .$source. '", "' .$intro. '", "' .$full. '", "' .$this->newsImg. '", "' .$this->newsPublic. '", ' .$this->newsDate. ', ' .$this->newsPoster. ', ' .$this->newsCate. ')';
         $this->query($sql);
     }
-    
+
     /**
      * Get news item info from database by id
      * ======================================
@@ -301,7 +301,7 @@ class News extends Database {
         $this->newsSource = $data["news_source"];
         $this->newsTitle = $data["news_title"];
     }
-    
+
     /**
      * Delete news image of a news item
      * ================================
@@ -311,7 +311,7 @@ class News extends Database {
             unlink('../data/news_img/'.$this->newsImg);
         }
     }
-    
+
     /**
      * Delete news item in database
      * ============================
@@ -322,7 +322,7 @@ class News extends Database {
         $this->query($sql);
         $this->delNewsImage();
     }
-    
+
     /**
      * Edit news item information in database
      * ======================================

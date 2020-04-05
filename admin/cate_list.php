@@ -26,9 +26,11 @@ $startRecord = $rowPerPage * ($currentPage - 1);
 
 // Load dữ liệu danh mục
 $cate = new Cate();
+// Khai báo phân trang
 $totalRecord = $cate->totalCate();
-$totalPage = $totalRecord / $rowPerPage;
+$totalPage =  ceil($totalRecord / $rowPerPage);
 $limit = 'limit ' .$startRecord. ', '.$rowPerPage;
+// Liet ke cate
 $catelist = $cate->listAllCate($limit);
 
 // Nội dung trang
