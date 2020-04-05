@@ -44,7 +44,7 @@ echo '
                         <td>' .$comment_item["username"]. '</td>
                         <td>' .$comment_item["news_title"]. '</td>
                         <td class="text-right">' .$comment_item["comment_content"]. '</td>
-                        <td class="text-right">04/04/2020</td>
+                        <td class="text-right">' .date("d/m/Y - H:i:s", $comment_item["comment_date"]). '</td>
                         <td class="text-center">
                             <a href="comment_del.php?id=' .$comment_item["commentid"]. '" onclick="return xacnhan(\'Bạn có chắc muốn xóa comment có STT là: ' .$stt. '\');"><img src="images/delete.png" /></a>
                         </td>

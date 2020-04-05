@@ -13,9 +13,10 @@ if (empty($_POST["content"]) || empty($_POST["newsid"]) || !User::isLogined()) {
     $content = addslashes(nl2br($_POST["content"]));
     $newsid = $_POST["newsid"];
     $user = $_SESSION[$prefix."userid"];
+    $date = time();
     require("libs/connect_db.php");
     // Thêm comment vào CSDL
-    $sql_add = 'insert into comments(comment_content, newsid, userid) values("' .$content. '", ' .$newsid. ', ' .$user. ')';
+    $sql_add = 'insert into comments(comment_content, newsid, userid, comment_date) values("' .$content. '", ' .$newsid. ', ' .$user. ', ' .$date. ')';
     //mysql_query($sql_add, $conn);
     $mysqli->query($sql_add);
 

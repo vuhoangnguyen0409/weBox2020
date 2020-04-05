@@ -9,7 +9,7 @@ class Comment extends Database {
 
     public function listAllComment() {
         $limit= 'LIMIT 0, 8';
-        $sql = 'select comment_content, commentid, news_title, username from comments left join news on comments.newsid=news.newsid left join user on comments.userid=user.userid order by commentid DESC';
+        $sql = 'select comment_content, commentid, comment_date, news_title, username from comments left join news on comments.newsid=news.newsid left join user on comments.userid=user.userid order by commentid DESC';
         $this->query($sql);
         $data = array();
         while ($row = $this->fetch()) {

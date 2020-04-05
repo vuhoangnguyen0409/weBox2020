@@ -14,6 +14,9 @@ $total_cate = $cate->totalCate();
 $news = new News();
 $total_news = $news->totalNews();
 
+$comment = new Comment();
+$total_comments = $comment->totalComment();
+
 // Chuẩn bị cho giao diện
 $admin_function = 'Trang Chính';
 $custon_menu = array(
@@ -42,6 +45,7 @@ require('templates/header_default.php');
                             <li>Tổng số user: <?php echo $total_user;?></li>
                             <li>Tổng số danh mục: <?php echo $total_cate;?></li>
                             <li>Tổng số bản tin: <?php echo $total_news;?></li>
+                            <li>Tổng số bình luận: <?php echo $total_comments;?></li>
                         </ul>
                     </td>
                 </tr>
