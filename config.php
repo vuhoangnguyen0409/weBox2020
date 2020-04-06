@@ -5,11 +5,16 @@
  * @copyright 2014
  */
 
-/** Cấu hình kết nối CSDL **/
+/* * Cấu hình kết nối CSDL
 $hostname = 'localhost';
 $hostuser = 'root';
 $hostpass = '';
-$dbname = 'phpnc74_json';
+$dbname = 'phpnc74_json';* */
+// Hosting
+$hostname = 'localhost';
+$hostuser = 'webdemo_user';
+$hostpass = '3MxNtJil';
+$dbname = 'webdemo_db';
 
 /** Cấu hình tiếp đầu ngữ cho session **/
 $prefix = 'phpnc75_';
