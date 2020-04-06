@@ -173,7 +173,7 @@ input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
     color: white;
     text-align: center;
     font-weight:  bold;
-    
+
     border-radius: 10px 10px 0px 0px;
     -moz-border-radius: 10px 10px 0px 0px;
     -webkit-border-radius: 10px 10px 0px 0px;
@@ -259,7 +259,7 @@ input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
 #leftmenu {
     background: #3A72C0 url("../images/bgd-module-spotline.png") repeat -50px top;
     margin-bottom: 10px;
-    
+
     border-radius: 0px 5px 5px 0px;
     -moz-border-radius: 0px 5px 5px 0px;
     -webkit-border-radius: 0px 5px 5px 0px;
@@ -273,7 +273,7 @@ input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
     background: #3A72C0 url("../images/bgd-module-spotline.png") repeat -46px top;
     border-bottom: 1px dotted #6C9FE6;
     font-size: 15px;
-    
+
     border-radius: 0px 5px 0px 0px;
     -moz-border-radius: 0px 5px 0px 0px;
     -webkit-border-radius: 0px 5px 0px 0px;
@@ -339,7 +339,7 @@ input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
     background: #3A72C0 url("../images/bgd-module-spotline.png") repeat -46px top;
     border-bottom: 1px dotted #ccc;
     font-size: 15px;
-    
+
     border-radius: 0px 5px 0px 0px;
     -moz-border-radius: 0px 5px 0px 0px;
     -webkit-border-radius: 0px 5px 0px 0px;
@@ -353,7 +353,7 @@ input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    
+
     border-radius: 0px 0px 5px 0px;
     -moz-border-radius: 0px 0px 5px 0px;
     -webkit-border-radius: 0px 0px 5px 0px;
@@ -398,7 +398,10 @@ input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
 #login label.password {
     background: url('../images/password-label-icon.png') no-repeat center center;
 }
-#login input[type=text], input[type=password] {
+#login label.useremail {
+    background: url('../images/email-label-icon.png') no-repeat center center;
+}
+#login input[type=text], input[type=password], input[type=email], input[type=tel] {
     width: 100%;
     height: 28px;
     border: 1px solid #ccc;
@@ -513,7 +516,7 @@ input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
     background: #f9f9f9;
     font-size: 11px;
     color: #E76637;
-    
+
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -538,7 +541,7 @@ input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
     margin-top: 10px;
     padding: 5px;
     font-size: 11px;
-    
+
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -556,13 +559,13 @@ input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
     background: #4C6E94;
     color: #bbb;
     text-align: center;
-    
+
     border-radius: 0px 0px 10px 10px;
     -moz-border-radius: 0px 0px 10px 10px;
     -webkit-border-radius: 0px 0px 10px 10px;
 }
 /*************************************************
-    THANH PHÂN TRANG (THUẬT TOÁN PHÂN TRANG) 
+    THANH PHÂN TRANG (THUẬT TOÁN PHÂN TRANG)
  ************************************************/
 .paging_nav {
     text-align: center;

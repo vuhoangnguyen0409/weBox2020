@@ -12,7 +12,7 @@
         }
     }
     ?>
-    
+
     <script type="text/javascript">
         function xacnhan(msg) {
             if (!window.confirm(msg)) {
@@ -21,7 +21,7 @@
             return true;
         }
     </script>
-	
+
 	<title>Admin Panel</title>
 </head>
 
@@ -44,7 +44,7 @@
                         <?php
                             if (isset($custon_menu)) {
                                 foreach ($custon_menu as $menu_href => $menu_name) {
-                                    echo ' | <a href="' .$menu_href. '">' .$menu_name. '</a>';
+                                    echo ' | <a href="' .$menu_href. '" target="">' .$menu_name. '</a>';
                                 }
                             }
                         ?>
