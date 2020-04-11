@@ -20,8 +20,8 @@ $dbname = 'webdemo_db';*/
 $prefix = 'phpnc75_';
 
 /** Cấu hình đường dẫn đến site (dùng cho KCFinder) **/
-//$siteURL = 'http://webox2020.local/';
-$siteURL = 'http://www.chuphinhphuquoc.com/';
+$siteURL = 'http://webox2020.local/';
+//$siteURL = 'http://www.chuphinhphuquoc.com/';
 
 /** Cấu hình cho username **/
 $username_min_len = 5;
